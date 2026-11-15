@@ -16,7 +16,7 @@ Every project below has its own repository with results, figures, data and the c
 
 | Repository | What it is | Status |
 |---|---|---|
-| [josim-cpr-bridge](https://github.com/FarukSamiBilgin/josim-cpr-bridge) | Carries any JoSIM current–phase relation to the quantum qubit spectrum (graphene, TBG, Dirac junctions); validated against JoSIM v2.7, CI | Open-source tool |
+| [josim-cpr-bridge](https://github.com/FarukSamiBilgin/josim-cpr-bridge) | Carries any JoSIM current–phase relation to the quantum qubit spectrum (graphene, TBG, Dirac junctions); validated against JoSIM v2.7, CI | Open-source tool · [DOI](https://doi.org/10.5281/zenodo.24246404) |
 | [superconducting-qubit-chip-design](https://github.com/FarukSamiBilgin/superconducting-qubit-chip-design) | Transmon layout → Hamiltonian → readout, T1/T2, DRAG and CZ gates → 5-qubit chip + GDS → logical error vs code distance | Design study (notebook) |
 | [jjqubit-studio](https://github.com/FarukSamiBilgin/jjqubit-studio) | Desktop schematic-to-solver simulator for superconducting circuits (RCSJ + Hamiltonian spectra) | Software |
 | [tbg-fractional-shapiro](https://github.com/FarukSamiBilgin/tbg-fractional-shapiro) | Fractional Shapiro steps as a current–phase fingerprint of a magic-angle TBG junction in a sub-THz cavity; electron thermometry | Manuscript in preparation |
