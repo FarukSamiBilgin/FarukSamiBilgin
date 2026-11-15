@@ -17,10 +17,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "assets")
 os.makedirs(OUT, exist_ok=True)
 
-SANS = "'IBM Plex Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
-MONO = "'IBM Plex Mono', 'SFMono-Regular', Consolas, Menlo, monospace"
-DARK = dict(bg="#0a0a0a", fg="#f2f2f0", mu="#9b9b96", fa="#5f5f5b", li="#2a2a2a", ac="#ff4433")
-LIGHT = dict(bg="#f4f4f1", fg="#121212", mu="#5c5c57", fa="#93938d", li="#d6d6cf", ac="#cf1f25")
+SANS = "'Archivo', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif"
+MONO = SANS  # no monospace anywhere: numbers use the text face
+DARK = dict(bg="#0a0a0a", fg="#f2f2f0", mu="#9b9b96", fa="#5f5f5b", li="#2a2a2a", ac="#da291c")
+LIGHT = dict(bg="#f4f4f1", fg="#121212", mu="#5c5c57", fa="#93938d", li="#d6d6cf", ac="#da291c")
 esc = lambda s: html.escape(s, quote=True)
 
 def path(pts):
@@ -152,11 +152,11 @@ def plate(num, label, title, desc, fn, c):
     fig = fn(c, (930, 40, 286, 140))
     body = (f'<rect width="{W}" height="{H}" fill="{c["bg"]}"/>'
             f'<line x1="64" y1="0.5" x2="{W-64}" y2="0.5" stroke="{c["li"]}"/>'
-            + text(64, 150, num, c, 116, SANS, weight=300, color=c["fg"]).replace("<text ", '<text letter-spacing="-5" ')
-            + text(250, 78, label.upper(), c, 13, SANS, weight=500).replace("<text ", '<text letter-spacing="2.4" ')
-            + text(250, 124, title, c, 32, SANS, weight=600, color=c["fg"]).replace("<text ", '<text letter-spacing="-0.8" ')
+            + text(64, 150, num, c, 116, SANS, weight=200, color=c["fg"]).replace("<text ", '<text letter-spacing="-4" ')
+            + text(250, 78, label.upper(), c, 12, SANS, weight=400).replace("<text ", '<text letter-spacing="3.6" ')
+            + text(250, 124, title, c, 33, SANS, weight=300, color=c["fg"]).replace("<text ", '<text letter-spacing="-0.4" ')
             + text(250, 160, desc, c, 18, SANS)
-            + text(250, 200, "Read the chapter  →", c, 14, SANS, weight=500, color=c["ac"])
+            + text(250, 200, "READ THE CHAPTER  →", c, 11, SANS, weight=500, color=c["ac"]).replace("<text ", '<text letter-spacing="3" ')
             + fig)
     return f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Chapter {num}: {esc(title)}">{body}</svg>'
 
@@ -187,15 +187,15 @@ def header():
 </defs>
 <rect width="{W}" height="{H}" fill="{c["bg"]}"/>
 <g mask="url(#m)"><rect x="360" y="-300" width="1200" height="1200" fill="url(#a)"/><rect x="360" y="-300" width="1200" height="1200" fill="url(#b)"/></g>
-''' + (text(64, 66, "FARUK SAMI BILGIN", c, 13, SANS, weight=500, color=c["fg"]).replace("<text ", '<text letter-spacing="2.4" ')
-       + text(W - 64, 66, "NOTES ON QUANTUM DEVICES", c, 13, SANS, "end", 500, c["fg"]).replace("<text ", '<text letter-spacing="2.4" ')
+''' + (text(64, 66, "FARUK SAMI BILGIN", c, 12, SANS, weight=500, color=c["fg"]).replace("<text ", '<text letter-spacing="3.6" ')
+       + text(W - 64, 66, "NOTES ON QUANTUM DEVICES", c, 12, SANS, "end", 500, c["fg"]).replace("<text ", '<text letter-spacing="3.6" ')
        + f'<line x1="0" y1="96.5" x2="{W}" y2="96.5" stroke="{c["li"]}"/>'
-       + text(64, 236, "Twisted lattices,", c, 70, SANS, weight=600, color=c["fg"]).replace("<text ", '<text letter-spacing="-2.4" ')
-       + text(64, 312, "junctions and qubits", c, 70, SANS, weight=600, color=c["fg"]).replace("<text ", '<text letter-spacing="-2.4" ')
+       + text(64, 236, "Twisted lattices,", c, 72, SANS, weight=300, color=c["fg"]).replace("<text ", '<text letter-spacing="-1.6" ')
+       + text(64, 312, "junctions and qubits", c, 72, SANS, weight=300, color=c["fg"]).replace("<text ", '<text letter-spacing="-1.6" ')
        + text(66, 372, "Seven short chapters on the physics behind my work. Each has a", c, 21, SANS)
        + text(66, 402, "figure you can change, and each ends with the full calculation", c, 21, SANS)
        + text(66, 432, "— code and data — in a public repository.", c, 21, SANS)
-       + text(66, 500, "faruksamibilgin.github.io  →", c, 16, SANS, weight=500, color=c["ac"])
+       + text(66, 500, "FARUKSAMIBILGIN.GITHUB.IO  →", c, 12, SANS, weight=500, color=c["ac"]).replace("<text ", '<text letter-spacing="3" ')
        + text(66, H - 40, "Header: two triangular lattices twisting between 1.6° and 4.2°; moiré period L = a / 2 sin(θ/2).", c, 13, SANS, color=c["fa"]))
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Notes on quantum devices by Faruk Sami Bilgin: twisted lattices, junctions and qubits.">{body}</svg>'
     open(os.path.join(OUT, "notes-header.svg"), "w", encoding="utf-8").write(svg)
