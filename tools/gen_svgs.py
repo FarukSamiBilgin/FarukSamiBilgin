@@ -20,9 +20,9 @@ THEMES = {
 }
 
 RESULTS = [
-    ("Twisted hBN, registry-resolved DFT", "V<tspan dy='4' font-size='12'>0</tspan><tspan dy='-4'> = 40 meV</tspan>"),
-    ("Orbital qubit in twisted hBN", "T<tspan dy='4' font-size='12'>1</tspan><tspan dy='-4'> ≈ 6–11 ps</tspan>"),
-    ("Magic-angle graphene junction", "half-step width 0.200 I<tspan dy='4' font-size='12'>c</tspan>"),
+    ("Twisted hBN, registry-resolved DFT", "V<tspan dy='5' font-size='15'>0</tspan><tspan dy='-5'> = 40 meV</tspan>"),
+    ("Orbital qubit in twisted hBN", "T<tspan dy='5' font-size='15'>1</tspan><tspan dy='-5'> ≈ 6–11 ps</tspan>"),
+    ("Magic-angle graphene junction", "half-step width 0.200 I<tspan dy='5' font-size='15'>c</tspan>"),
     ("Repeater chain, 400 km", "1.94 Hz with optimal cutoff"),
 ]
 
@@ -51,8 +51,8 @@ def hero(theme):
         s, e = i / n, (i + 1) / n
         kt = f"0;{s:.4f};{s+f:.4f};{e-f:.4f};{e:.4f};1"
         cycle += (f'<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="{kt}" dur="{dur}s" repeatCount="indefinite"/>'
-                  f'<text x="0" y="0" font-family="{SANS}" font-size="14" fill="{t["muted"]}">{esc(label)}</text>'
-                  f'<text x="0" y="26" font-family="{MONO}" font-size="19" fill="{t["accent"]}">{value}</text></g>')
+                  f'<text x="0" y="0" font-family="{SANS}" font-size="17" fill="{t["muted"]}">{esc(label)}</text>'
+                  f'<text x="0" y="32" font-family="{MONO}" font-size="24" fill="{t["accent"]}">{value}</text></g>')
     body = f'''
 <defs>
   <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
@@ -70,12 +70,12 @@ def hero(theme):
   </g>
 </g>
 <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="12" fill="none" stroke="{t["border"]}"/>
-<text x="64" y="132" font-family="{SANS}" font-size="52" font-weight="600" fill="{t["text"]}" letter-spacing="-0.8">Faruk Sami Bilgin</text>
-<text x="66" y="174" font-family="{SANS}" font-size="19" fill="{t["muted"]}">Independent researcher in quantum devices</text>
-<text x="66" y="202" font-family="{SANS}" font-size="19" fill="{t["muted"]}">Josephson and moiré qubits, graphene quantum dots, quantum networks</text>
-<line x1="66" x2="126" y1="262" y2="262" stroke="{t["border"]}" stroke-width="1"/>
+<text x="64" y="132" font-family="{SANS}" font-size="58" font-weight="600" fill="{t["text"]}" letter-spacing="-0.8">Faruk Sami Bilgin</text>
+<text x="66" y="180" font-family="{SANS}" font-size="23" fill="{t["muted"]}">Independent researcher in quantum devices</text>
+<text x="66" y="212" font-family="{SANS}" font-size="23" fill="{t["muted"]}">Josephson and moiré qubits, graphene quantum dots, quantum networks</text>
+<line x1="66" x2="126" y1="256" y2="256" stroke="{t["border"]}" stroke-width="1"/>
 <g transform="translate(66,296)">{cycle}</g>
-<text x="{W-36}" y="{H-30}" text-anchor="end" font-family="{SANS}" font-size="12" fill="{t["faint"]}">Two triangular lattices, twist 1.5°–4.0° · moiré period L = a / 2 sin(θ/2)</text>
+<text x="{W-36}" y="{H-30}" text-anchor="end" font-family="{SANS}" font-size="14" fill="{t["faint"]}">Two triangular lattices, twist 1.5°–4.0° · moiré period L = a / 2 sin(θ/2)</text>
 '''
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
            f'aria-label="Faruk Sami Bilgin, independent researcher in quantum devices">{body}</svg>')
