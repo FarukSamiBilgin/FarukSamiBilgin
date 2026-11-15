@@ -5,7 +5,7 @@
 
 I work on the physics of superconducting and moiré quantum devices: Josephson junctions in magic-angle graphene, moiré materials as qubit hosts, graphene quantum dots, and quantum-network protocols. The work is computational and done independently, and each project is published with its code and data. One rule runs through all of it: a load-bearing result is re-derived by an independent method before it is reported, and a negative result is reported as a negative result.
 
-**[faruksamibilgin.github.io](https://faruksamibilgin.github.io)** — interactive moiré, results and a searchable research index · [ORCID 0009-0001-9064-4410](https://orcid.org/0009-0001-9064-4410) · [josim-cpr-bridge on Zenodo](https://doi.org/10.5281/zenodo.24246404)
+**[Notes on quantum devices](https://faruksamibilgin.github.io)** — seven short chapters on twisted lattices, Josephson junctions, qubits, coherence and repeaters, with figures you can change · [ORCID 0009-0001-9064-4410](https://orcid.org/0009-0001-9064-4410) · [josim-cpr-bridge on Zenodo](https://doi.org/10.5281/zenodo.24246404)
 
 &nbsp;
 
