@@ -1,43 +1,24 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img src="assets/header-light.svg" width="100%" alt="Faruk Sami Bilgin — independent researcher in quantum devices. A slowly rotating moiré pattern of two triangular lattices.">
-</picture>
+<a href="https://faruksamibilgin.github.io"><img src="assets/notes-header.svg" width="100%" alt="Notes on quantum devices by Faruk Sami Bilgin — twisted lattices, junctions and qubits. A slowly rotating moiré of two triangular lattices."></a><a href="https://faruksamibilgin.github.io/#ch1"><img src="assets/ch01.svg" width="100%" alt="Chapter 01 — Two lattices, one twist"></a><a href="https://faruksamibilgin.github.io/#ch2"><img src="assets/ch02.svg" width="100%" alt="Chapter 02 — A junction is a nonlinear inductor"></a><a href="https://faruksamibilgin.github.io/#ch3"><img src="assets/ch03.svg" width="100%" alt="Chapter 03 — Listening to a junction with microwaves"></a><a href="https://faruksamibilgin.github.io/#ch4"><img src="assets/ch04.svg" width="100%" alt="Chapter 04 — A qubit is the bottom of a ladder"></a><a href="https://faruksamibilgin.github.io/#ch5"><img src="assets/ch05.svg" width="100%" alt="Chapter 05 — What a qubit forgets, and how fast"></a><a href="https://faruksamibilgin.github.io/#ch6"><img src="assets/ch06.svg" width="100%" alt="Chapter 06 — Sending entanglement far"></a><a href="https://faruksamibilgin.github.io/#ch7"><img src="assets/ch07.svg" width="100%" alt="Chapter 07 — When the answer is no"></a>
 
-I work on the physics of superconducting and moiré quantum devices: Josephson junctions in magic-angle graphene, moiré materials as qubit hosts, graphene quantum dots, and quantum-network protocols. The work is computational and done independently, and each project is published with its code and data. One rule runs through all of it: a load-bearing result is re-derived by an independent method before it is reported, and a negative result is reported as a negative result.
-
-**[Notes on quantum devices](https://faruksamibilgin.github.io)** — seven short chapters on twisted lattices, Josephson junctions, qubits, coherence and repeaters, with figures you can change · [ORCID 0009-0001-9064-4410](https://orcid.org/0009-0001-9064-4410) · [josim-cpr-bridge on Zenodo](https://doi.org/10.5281/zenodo.24246404)
+These notes explain the physics behind my work — how twisted lattices, Josephson junctions and qubits behave, what limits their coherence, and how entanglement is carried over distance. Each chapter at **[faruksamibilgin.github.io](https://faruksamibilgin.github.io)** has a figure you can change; the small figures above are computed from the same equations, and each chapter ends with the calculation, code and data in a public repository.
 
 &nbsp;
 
-### Preprints
+### Papers, code and data
 
-1. **Testing the twisted-hBN artificial-atom proposal by registry-resolved DFT** — a symmetry-forbidden potential form, a three-to-fourfold-weaker well, and what survives. 2026.
+1. **Testing the twisted-hBN artificial-atom proposal by registry-resolved DFT** — a symmetry-forbidden potential form, a three-to-fourfold-weaker well, and what survives. Preprint, 2026.
    [Zenodo](https://doi.org/10.5281/zenodo.24201814) · [alphaXiv](https://www.alphaxiv.org/abs/2611.twisted-hbn-artificial-atoms-registry-dft) · [code and data](https://github.com/FarukSamiBilgin/twisted-hbn-artificial-atoms)
-2. **Twisted bilayer MoS₂ cannot talk to light** — a Γ-valley hole spin memory and its isotope-purification coherence budget. 2026.
+2. **Twisted bilayer MoS₂ cannot talk to light** — a Γ-valley hole spin memory and its isotope-purification coherence budget. Preprint, 2026.
    [alphaXiv](https://www.alphaxiv.org/abs/2611.twisted-mos2-hole-spin-coherence) · [code and data](https://github.com/FarukSamiBilgin/twisted-mos2-hole-spin-coherence)
-3. **The single-photon microwave loss of a moiré superconducting element** — why the published geometry cannot measure it, and a two-device experiment that can. 2026.
+3. **The single-photon microwave loss of a moiré superconducting element** — why the published geometry cannot measure it, and a two-device experiment that can. Preprint, 2026.
    [Zenodo](https://doi.org/10.5281/zenodo.24204124) · [code and data](https://github.com/FarukSamiBilgin/moire-microwave-loss)
+4. **josim-cpr-bridge** — a classical-to-quantum current–phase-relation bridge for exotic Josephson junctions. Software v0.1.0, 2026. Johannes Delport, the lead developer of JoSIM, is a collaborator on the repository.
+   [Zenodo](https://doi.org/10.5281/zenodo.24246404) · [code](https://github.com/FarukSamiBilgin/josim-cpr-bridge)
 
-**Software.** [josim-cpr-bridge](https://github.com/FarukSamiBilgin/josim-cpr-bridge) carries any current–phase relation simulated in JoSIM to the quantum qubit spectrum. Johannes Delport, the lead developer of JoSIM, is a collaborator on the repository. [DOI 10.5281/zenodo.24246404](https://doi.org/10.5281/zenodo.24246404)
-
-&nbsp;
-
-### Selected figures
-
-<table>
-<tr>
-<td width="50%" valign="top"><a href="https://github.com/FarukSamiBilgin/twisted-hbn-artificial-atoms"><img src="https://raw.githubusercontent.com/FarukSamiBilgin/twisted-hbn-artificial-atoms/main/figures/fig2_levels.png" width="100%" alt="Claimed versus DFT-measured moiré potential in twisted hBN"></a><br><sub><b>Twisted hBN.</b> The proposed moiré well (left) against the potential measured by registry-resolved DFT (right): the well sits at AA and is three to four times shallower.</sub></td>
-<td width="50%" valign="top"><a href="https://github.com/FarukSamiBilgin/matbg-subthz-limits"><img src="https://raw.githubusercontent.com/FarukSamiBilgin/matbg-subthz-limits/main/figures/fig3_cpr_shapiro.png" width="100%" alt="Skewed current-phase relation and the half-integer Shapiro step"></a><br><sub><b>Magic-angle graphene junction.</b> A skewed current–phase relation (left) produces a half-integer Shapiro step of width 0.200 I<sub>c</sub> (right) — a fingerprint of junction transparency.</sub></td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://github.com/FarukSamiBilgin/twisted-mos2-hole-spin-coherence"><img src="https://raw.githubusercontent.com/FarukSamiBilgin/twisted-mos2-hole-spin-coherence/main/figures/fig3_koherans_butcesi.png" width="100%" alt="Hole-spin coherence budget versus residual spinful isotope fraction"></a><br><sub><b>Twisted MoS₂.</b> Hole-spin T<sub>2</sub>* against the residual spinful-isotope fraction, and the floor set by the nuclear spins of the hBN encapsulation.</sub></td>
-<td width="50%" valign="top"><a href="https://github.com/FarukSamiBilgin/repeater-cutoff-policies"><img src="https://raw.githubusercontent.com/FarukSamiBilgin/repeater-cutoff-policies/main/figures/e1_cutoff_pareto.png" width="100%" alt="Fidelity, rate and key rate versus memory cutoff in a repeater chain"></a><br><sub><b>Quantum repeater, 400 km.</b> A memory cutoff trades rate for fidelity; the secret-key rate is non-monotone in the cutoff and peaks at 1.94 Hz where no cutoff gives zero key.</sub></td>
-</tr>
-</table>
+<details>
+<summary><b>Every repository (31)</b> — grouped by topic, with status</summary>
 
 &nbsp;
-
-### Research
 
 Each entry is its own repository with results, figures, data and the scripts that produced them. *In revision* means an internal audit found issues that are being corrected; those repositories report only results that survived it.
 
@@ -100,10 +81,12 @@ Each entry is its own repository with results, figures, data and the scripts tha
 | [qhack-2026-pennylane](https://github.com/FarukSamiBilgin/qhack-2026-pennylane) | Xanadu QHack 2026 solutions, 65 earlier QHack problems checked against independent references, and the qlab evaluation toolkit. |
 | [femtosat-power-architecture](https://github.com/FarukSamiBilgin/femtosat-power-architecture) | Energy-banking power architecture for coin-sized femtosatellites, and a B.Sc. thesis on flyback converters. |
 
+</details>
+
 &nbsp;
 
-### How the work is done
+### Method
 
-Each result that a conclusion depends on is computed twice, by two different methods — a closed form against a numerical solver, a continuum model against an atomistic one, a second code written from the paper rather than from the first. Where they disagree, the disagreement is the finding. Six of the repositories above end in a negative or limiting result, and they are kept public for that reason. AI coding assistants are used for development and for adversarial review; every repository states how its results were checked, and I am responsible for every claim.
+Every result a conclusion depends on is computed twice, by two different routes — a closed form against a numerical solver, a continuum model against an atomistic one, a second code written from the paper rather than from the first. Where the routes disagree, the disagreement is the finding, and calculations that rule something out are kept public with the numbers that settled them. AI coding assistants are used for development and for adversarial review; each repository states how its results were checked.
 
-<sub>Electrical engineer, Yildiz Technical University</sub>
+<sub>Faruk Sami Bilgin · independent researcher · electrical engineer, Yildiz Technical University · [ORCID 0009-0001-9064-4410](https://orcid.org/0009-0001-9064-4410)</sub>
